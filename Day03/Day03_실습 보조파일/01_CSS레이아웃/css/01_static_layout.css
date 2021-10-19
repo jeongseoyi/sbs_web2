@@ -20,7 +20,7 @@
  section{width: 750px;}
 
  *,
- *:before
+ *:before,
  *:after
  {
     -moz-box-sizing: border-box;

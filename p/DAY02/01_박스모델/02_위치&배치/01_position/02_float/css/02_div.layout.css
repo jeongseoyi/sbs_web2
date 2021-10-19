@@ -1,0 +1,32 @@
+*{box-sizing: border-box; margin: 0;}
+
+body{font-family: Arial, Helvetica, sans-serif;}
+
+#header{background-color: lightgray;
+        height: 100px;}
+
+#nav {
+    background-color: #339999;
+    color: white;
+    width: 200px;
+    height: 300px;
+    float: left;
+}
+
+#section{
+    width: 200px;
+    text-align: left;
+    padding: 10px;  
+    float: left;
+}
+
+#footer{
+    background-color: #ffcc00;
+    height: 100px;
+    clear: both;
+    /* 따로 영역을 잡아주기 위한 것 */
+}
+
+#header, #nav, #section, #footer{text-align: center;}
+#header,#footer{line-height: 100px;}
+#nav, #section{line-height: 240px;}
