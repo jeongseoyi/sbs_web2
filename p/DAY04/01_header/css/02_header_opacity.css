@@ -16,6 +16,7 @@ img{vertical-align: middle;}
 a img{border: none;}
 address, em, i{font-style: normal;}
 a:focus{outline: none;}
+button:focus{outline: none;}
 
 /* layout */
 body{font-size: 14px; color: #000; line-height: 1.4;}
@@ -60,3 +61,50 @@ header .menuOpen span{
 
 header .menuOpen span.mid{top: 50%;}
 header .menuOpen span.bot{top: 100%;}
+
+header .book{
+    display: inline-block;
+    float: left;
+    margin-left: 70px;
+    height: 100%;
+    font-size: 25px;
+}
+
+header .langs{
+    float: left;
+    margin-left: 220px;
+    width: 150px;
+    overflow: hidden;
+}
+
+header .langs li{
+    float: left;
+    width: 50%;
+}
+
+header .langs li:nth-child(1){
+    font-weight: bold;
+}
+
+header .langs li:nth-child(2){
+    color: #ddd;
+}
+
+header .langs li a{
+    display: block;
+    padding: 0 30px;
+    box-sizing: border-box;
+    text-transform: uppercase;
+}
+
+header .right{
+    float: right;
+}
+
+header .right li{
+    float: left;
+    margin-right: 55px;
+}
+
+
+img{width: 100%;}
