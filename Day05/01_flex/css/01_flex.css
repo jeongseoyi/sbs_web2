@@ -1,0 +1,110 @@
+.container{
+    width: 1200px;
+    margin: 0 auto;
+    border: 3px dashed hotpink;
+
+}
+/* container&item */
+.flex-container{
+    display: flex;
+    border: 1px solid lightcoral;
+}
+
+.item{
+    width: 100px;
+    height: 100px;
+    margin: 20px;
+    font-size: 30px;
+    line-height: 60px;
+    background: royalblue;
+    color: white;
+    box-sizing: border-box;
+    padding: 20px;
+    text-align: center;
+}
+
+/* flex-direction */
+
+.row{
+    flex-direction: row;  
+    /* default */
+}
+
+.column{
+    flex-direction: column;
+}
+
+.row-reverse{
+    flex-direction: row-reverse;  
+    /* default */
+}
+
+.column-reverse{
+    flex-direction: column-reverse;
+}
+
+/* flex */
+
+.nowrap{
+    flex-wrap: nowrap;
+}
+
+.wrap{
+    flex-wrap: wrap;
+}
+
+.wrap-reverse{
+    flex-wrap: wrap-reverse;
+}
+
+
+/* flex-flow */
+
+.row-wrap{
+    flex-flow: row wrap;
+}
+
+/* justify-content */
+.center{
+    justify-content: center;
+}
+
+.start{
+    justify-content: start;
+}
+
+.end{
+    justify-content: end;
+}
+
+.between{
+    justify-content: space-between;
+}
+
+.around{
+    justify-content: space-around;
+}
+
+/* align-items */
+.cross{height: 400px;}
+
+.cross-center{
+    align-items: center;
+}
+
+.cross-end{
+    align-items: flex-end;
+}
+
+.cross-start{
+    align-items: flex-start;
+}
+
+
+.cross-stretch{
+    align-items: stretch;
+}
+
+.cross-stretch .item{
+    
+}
