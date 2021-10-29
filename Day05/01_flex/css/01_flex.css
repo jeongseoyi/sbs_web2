@@ -104,7 +104,31 @@
 .cross-stretch{
     align-items: stretch;
 }
+/* height를 auto로 적용되여야함. */
 
-.cross-stretch .item{
-    
+/* align content */
+.content-stretch{
+    align-content: stretch;
+    flex-wrap: wrap;
+}
+.content-start{
+    align-content: flex-start;
+    flex-wrap: wrap;
+}
+
+.content-end{
+    align-content: flex-end;
+    flex-wrap: wrap;
+}
+.content-center{
+    align-content: center; 
+    flex-wrap: wrap;
+}
+.content-between{
+    align-content: space-between; 
+    flex-wrap: wrap;
+}
+.content-around{
+    align-content: space-around; 
+    flex-wrap: wrap;
 }
