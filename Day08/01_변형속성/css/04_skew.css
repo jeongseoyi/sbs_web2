@@ -1,10 +1,12 @@
 .container{
     position: relative;
-    margin: 0 auto;
-    width: 1200px;
+    margin: 100px auto;
+    padding: 50px;
+    width: 1400px;
     height: 500px;
     border: 3px dashed orange;
     box-sizing: border-box;
+    
 }
 
 .inner{text-align: center;}
@@ -36,14 +38,16 @@
     z-index: -1;
 }
 
-.translate1:hover{
-    transform: translate(45px, 45px);
+.skew1:hover{
+    transform: skew(45deg,45deg);
 }
 
-.translate2:hover{
-    transform: translateX(45px);
+.skew2:hover{
+    transform: skewX(45deg);
 }
 
-.translate3:hover{
-    transform: translateY(45px);
+.skew3:hover{
+    transform: skewY(45deg);
 }
+
+/* ctrl+f 찾기 기능 */
