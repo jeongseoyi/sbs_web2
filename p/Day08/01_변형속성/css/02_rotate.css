@@ -1,16 +1,14 @@
 .container{
     position: relative;
     margin: 0 auto;
-    width: 1200px;
+    width: 1400px;
     height: 500px;
     border: 3px dashed orange;
     box-sizing: border-box;
+
 }
 
-.inner{
-    text-align: center;
-}
-
+.inner{text-align: center;}
 .box{
     display: inline-block;
     position: relative;
@@ -26,8 +24,7 @@
     width: 150px;
     height: 150px;
     background-color: royalblue;
-    transition: 1s; /*1초 뒤에 천천히 반응함*/
-
+    transition: 1s; /*1초 뒤에 천천히 반응함.*/
 }
 
 .absolute{
@@ -39,12 +36,19 @@
     z-index: -1;
 }
 
-.translate1:hover{
-    transform: translate(45px, 45px);
+
+.rotate1:hover{
+    transform: rotate(45deg);
 }
-.translate2:hover{
-    transform: translateX(45px);
+
+.rotate2:hover{
+    transform: rotateX(45deg);
 }
-.translate3:hover{
-    transform: translateY(45px);
+
+.rotate3:hover{
+    transform: rotateY(45deg);
+}
+
+.rotate4:hover{
+    transform: rotateZ(45deg);
 }
