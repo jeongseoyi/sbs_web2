@@ -99,10 +99,12 @@ header{
     background: rgba(100, 100, 100, 0.4);
     height: 200px;
     display: none;
+    
 }
 .innerHeader .gnb li .inner li{
     height: 50px;
     line-height: 50px;
+    margin: 0 auto;
 }
 .innerHeader .gnb li .inner li a{
     color: #000;
@@ -424,13 +426,13 @@ footer{
     padding: 30px 0 50px;
 
 }
-footer .inner{width: 1400px; margin: 0 auto; overflow: hidden;}
+footer .inner{width: 1600px; margin: 0 auto; overflow: hidden;}
 footer .inner .ftLogo{float: left;}
-footer .inner .address{float: left; margin-left: 150px; margin-top: 10px;}
+footer .inner .address{float: left; margin-left: 100px; margin-top: 10px;}
 footer .inner .address li:first-child{font-weight: bold; margin-bottom: 10px;}
 footer .inner .address li:last-child{color: #999;}
-footer .inner .list{float: right; margin-top: 10px;}
-footer .inner .list li{float: left; margin-left: 50px;}
+footer .inner .list{float: right; font-family: 'Exo 2', sans-serif; margin-top: 10px;}
+footer .inner .list li{float: left; margin-left: 80px;}
 footer .inner .list li a{display: block; width: 100%; height: 100%; position: relative;}
 footer .inner .list li a:after{
     content: ''; width: 4px; height: 4px; border-radius: 50%;
@@ -448,35 +450,38 @@ footer .inner .list li a:focus
 }
 footer .inner .list li:last-child a{
     font-weight: bold;
-}
-footer .inner .list li:last-child a:after{
-   display: none;
+    font-family: 'Exo 2',sans-serif;
 }
 
 /* 반응형 */
 
 
-/* 1600 */
+/* 1599 */
 @media screen and (max-width:1599px){
     header .innerHeader {width: 95%; min-width: 1024px;}
     .innerHeader .gnb{margin-left: 50px;}
     .innerHeader .gnb li{margin-left: 40px;}
     .innerHeader .gnb li:last-child{margin-right: 0px;}
-    section.contents ul, section.service, .imgBox, section.sns ul{
-        width: 95%;
-    }
+    section.contents ul, section.service .imgBox,section.me ul.list,section.sns ul {width: 95%;}
     footer .inner{width: 95%; min-width: 90%;}
     footer .inner .list li{margin-left: 20px;}
     footer .inner .list li a:after{right: -13px;}
 
+    section.portfolio .gridBox {
+        width: 1200px;
+        margin: 0 auto;
+    }
+
+    .img-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
 }
 
 
-/* 1024 */
+/* 태블릿모드 1024 */
 @media screen and (max-width:1024px){
     header .innerHeader{width: 95%; min-width: 90%;}
     section.visual{height: 300px; margin-top: 100px;}
-    section.visual .slide{height: 300px; margin-top: 100px;}
     section.visual .slide li{height: 300px;}
     section.visual .slide li .txt{
         font-size: 1.3rem; line-height: 1.4rem; height: 50px; width: 30%;
@@ -507,94 +512,119 @@ footer .inner .list li:last-child a:after{
 @media screen and (max-width:768px) {
     section.visual{width: 95%; min-width: 90%;}
     section.visual .slide{height: 300px; margin-top: 100px;}
-    section.visual .slide li{height: 300px;}
-    section.visual .slide li .txt{
-        font-size: 0.9rem; line-height: 1.2rem; height: 40px; width: 30%;
-        top: 20%;
+    section.visual .slide li{height: 300px;}/*태블릿모드 1024*/
+    @media screen and (max-width:1024px) {
+        header .innerHeader {width: 95%; min-width: 90%;}
+        section.visual { height: 300px; margin-top: 100px;} 
+        section.visual .slide li { height: 300px; }
+        section.visual .slide li .txt { font-size: 1.3rem; line-height: 1.4rem; height: 50px; width: 30%; top: 20%;}
+        section.visual .slide li .find { font-size: 1.2rem; line-height: 1.5rem; height: 30px; width: 140px; top: 40%;}
+        .innerHeader .gnb, .innerHeader .tnb {display: none;}
+        .innerHeader .gnbMo {display: block; color: #fff; font-size: 40px;float: right;}
+        section.main .mainTitle {width: 80%;}
+        section.me {margin-bottom: 50px; }
+        section.me ul.in li p:before {left: -20px;}
+        section.me ul.in li {margin-bottom: 0;}
+        section.me ul.list li > p {margin-bottom: 10px;}
+        section.sns ul li {width: 32.2%; margin-right: 1.7%;}
+        footer .inner .list {display: none;}
+    
+        section.portfolio .gridBox {
+            width: auto;
+        }
+    
+        .img-grid {
+            grid-template-columns: repeat(3, 1fr);
+        }
     }
-    section.visual .slide li .find{
-        font-size: 0.8rem;
-        line-height: 1.2rem;
-        height: 20px;
-        width: 100px;
-        top: 40%;
+    /*태블릿모드 768*/
+    @media screen and (max-width:768px) {
+        section.visual { height: 300px; margin-top: 60px;} 
+        section.visual .slide li { height: 300px; }
+        section.visual .slide li .txt { font-size: 0.9rem; line-height: 1.2rem; height: 40px; width: 30%; top: 20%;}
+        section.visual .slide li .find { font-size: 0.8rem; line-height: 1.2rem; height: 20px; width: 100px; top: 40%;}
+        section.main .mainTitle h2 {font-size: 40px;}
+        section.main .mainTitle p {font-size: 20px;}
+        section.contents {padding: 50px 0;}
+        section.contents ul li {width: 100%;}
+        section.service .imgBox .inner h3 {padding: 20px;}
+        section.service .imgBox .inner .bottom {padding: 30px;}
+        section.service .imgBox .inner .bottom p .clear {display: none;}
+        section.service .imgBox .inner .bottom p{float: none; margin-bottom: 30px;}
+        section.service .imgBox .inner .bottom a {float: none; margin-left: 32%;}
+        section.me {padding: 50px 0 ; margin-bottom: 80px;}
+        section.me ul.in li em {display: block; float: none; width: 100%; font-size: 17px; margin-bottom: 5px;}
+        section.sns ul li {width: 100%;}
+        footer .inner .ftLogo {float: none; width: 100%; text-align: center;}
+        footer .inner .address {float: none; width: 100%; margin-left: 32%;}
+        footer .inner .address li:last-child {margin-left: 12%;}
+    
+        section.portfolio .gridBox {
+            width: auto;
+        }
+    
+        .img-grid {
+            grid-template-columns: repeat(2, 1fr);
+        }
     }
-    section.contents{
-        padding: 50px 0;
+    /*태블릿모드 414*/ 
+    @media screen and (max-width:414px) {
+        header {height: 60px; line-height: 60px;}    
+        .innerHeader {height: 100%; line-height: 60px;}    
+        .innerHeader .logo {padding-top: 5px;}     
+        .innerHeader .logo img { height: 60px;}
+        section.visual { height: 300px; margin-top: 60px;} 
+        section.visual .slide li { height: 300px; }
+        section.visual .slide li .txt { font-size: 0.9rem; line-height: 1.2rem; height: 40px; width: 100%; top: 20%;}
+        section.visual .slide li .find { font-size: 0.8rem; line-height: 1.2rem; height: 20px; width: 100px; top: 40%;}
+        section.main .mainTitle h2 {font-size: 30px;}     
+        section.main .mainTitle p {font-size: 16px;}    
+        section.main .mainTitle .view {width: 150px; font-size: 14px;}    
+        section .title h2 {font-size: 25px;}    
+        section .title p {font-size: 14px;}    
+        section.contents {padding: 30px 0;}
+        section.contents ul {border-bottom: none;}
+        section.contents ul li a {border: 1px solid #ddd; box-sizing: border-box; background: #fafafa; margin-bottom: 10px;}
+        section.contents ul li a .text p.more {display: none;}
+        section.service .imgBox .inner .bottom a {margin-left: 20%;}
+        section.me ul.list > li {padding: 20px 0 20px 45px; }
+        footer .inner .address {margin-left: 15%;}
+        footer .inner .address li:last-child {margin-left: 22%;}  
+        footer .inner .ftLogo img { height: 50px;}
+    
+        section.portfolio .gridBox {
+            width: auto;
+        }
+    
+        .img-grid {
+            grid-template-columns: repeat(1, 1fr);
+        }
     }
-    section.contents ul li{font-size: 20px;}
-
-    section.service .imgBox .inner h3{padding: 20px;}
-    section.service .imgBox .inner .bottom{padding: 30px;}
-    section.service .imgBox .inner .bottom p .clear{display: none;}
-    section.service .imgBox .inner .bottom p{float: none; margin-bottom: 30px;}
-    section.service .imgBox .inner .bottom a{float: none; margin-left: 32%;}
-
-    section.sns ul li{width: 100%;}
-
-    footer .inner .ftLogo{float: none; width: 100%; text-align: center;}
-    footer .inner .address{float: none; width: 100%; margin-left: 32%;}
-    footer .inner .address li:last-child{margin-left: 12%;}
-
-}
-/* 414 */
-
-@media screen and (max-width:414px) {
-    header{height: 60px; line-height: 60px;}
-    .innerHeader{height: 100%; line-height: 60px;}
-    .innerHeader .logo{padding-top: 5px;}
-
-    section.visual{width: 95%; min-width: 90%;}
-    section.visual .slide{height: 300px; margin-top: 100px;}
-    section.visual .slide li{height: 300px;}
-    section.visual .slide li .txt{
-        font-size: 0.9rem; line-height: 1.2rem; height: 40px; width: 100%;
-        top: 20%;
+    /*모바일 모드 320*/ 
+    @media screen and (max-width:320px) {
+        br.mo {display: block;}
+        .wrap {min-width: 320px; width: 100vw;}
+        header .innerHeader{min-width: 320px;}
+        .innerHeader .logo {width: 140px; height: auto;}
+        .innerHeader .gnbMo {margin-right: 10px;}
+        section.visual .slide li .txt { font-size: 0.9rem; line-height: 1.2rem; height: 40px; width: 100%;}
+        section.visual .slide li .find { font-size: 0.8rem; line-height: 1.2rem; height: 20px; width: 100px;}
+        section.visual { height: 300px; margin-top: 60px;} 
+        section.visual .slide li { height: 300px; }
+        section.contents {padding: 10px 0;}
+        section.contents ul li a .text {padding: 15px;}
+        section.contents ul li a .text h3 {font-size: 18px; margin-bottom: 5px;}
+        section.contents ul li a .text p {font-size: 15px;}
+        section.service .imgBox {height: 300px;}
+        section.service .imgBox .inner .bottom a {margin-left:18px; }
+        footer .inner .address {margin-left: 5%;}
+        footer .inner .address li:last-child {margin-left: 27%;}   
+    
+        section.portfolio .gridBox {
+            width: auto;
+        }
+    
+        .img-grid {
+            grid-template-columns: repeat(1, 1fr);
+        }
     }
-    section.visual .slide li .find{
-        font-size: 0.8rem;
-        line-height: 1.2rem;
-        height: 20px;
-        width: 100px;
-        top: 40%;
-    }
-    section.contents{
-        padding: 30px 0;
-    }
-    section.contents ul{border-bottom: none;}
-    section.contents ul li a{
-        border: 1px solid #ddd;
-        box-sizing: border-box;
-        background: #fafafa;
-        margin-bottom: 10px;
-    }
-    section.contents ul li a .text p.more{display: none;}
-
-
-  
-    section.service .imgBox .inner .bottom a{margin-left: 20%;}
-
-    footer .inner .address{margin-left: 15%;}
-    footer .inner .address li:last-child{margin-left: 22%;}
-
-}
-/* 320 */
-
-@media screen and (max-width:320px) {
-    .wrap {min-width: 320px; width: 100vw;}
-    header .innerHeader{min-width: 320px;}
-    .innerHeader .logo {width: 140px; height: auto;}
-    .innerHeader .gnbMo {margin-right: 10px;}
-    section.visual .slide li .txt { font-size: 0.9rem; line-height: 1.2rem; height: 40px; width: 100%;}
-    section.visual .slide li .find { font-size: 0.8rem; line-height: 1.2rem; height: 20px; width: 100px;}
-    section.visual { height: 300px; margin-top: 60px;} 
-    section.visual .slide li { height: 300px; }
-    section.contents {padding: 10px 0;}
-    section.contents ul li a .text {padding: 15px;}
-    section.contents ul li a .text h3 {font-size: 18px; margin-bottom: 5px;}
-    section.contents ul li a .text p {font-size: 15px;}
-    section.service .imgBox {height: 300px;}
-    section.service .imgBox .inner .bottom a {margin-left:18px; }
-    footer .inner .address {margin-left: 5%;}
-    footer .inner .address li:last-child {margin-left: 27%;}  
-}
