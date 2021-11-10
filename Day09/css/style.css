@@ -508,35 +508,6 @@ footer .inner .list li:last-child a{
     footer .inner .list{display: none;}
 
 }
-/* 768 태블릿*/
-@media screen and (max-width:768px) {
-    section.visual{width: 95%; min-width: 90%;}
-    section.visual .slide{height: 300px; margin-top: 100px;}
-    section.visual .slide li{height: 300px;}/*태블릿모드 1024*/
-    @media screen and (max-width:1024px) {
-        header .innerHeader {width: 95%; min-width: 90%;}
-        section.visual { height: 300px; margin-top: 100px;} 
-        section.visual .slide li { height: 300px; }
-        section.visual .slide li .txt { font-size: 1.3rem; line-height: 1.4rem; height: 50px; width: 30%; top: 20%;}
-        section.visual .slide li .find { font-size: 1.2rem; line-height: 1.5rem; height: 30px; width: 140px; top: 40%;}
-        .innerHeader .gnb, .innerHeader .tnb {display: none;}
-        .innerHeader .gnbMo {display: block; color: #fff; font-size: 40px;float: right;}
-        section.main .mainTitle {width: 80%;}
-        section.me {margin-bottom: 50px; }
-        section.me ul.in li p:before {left: -20px;}
-        section.me ul.in li {margin-bottom: 0;}
-        section.me ul.list li > p {margin-bottom: 10px;}
-        section.sns ul li {width: 32.2%; margin-right: 1.7%;}
-        footer .inner .list {display: none;}
-    
-        section.portfolio .gridBox {
-            width: auto;
-        }
-    
-        .img-grid {
-            grid-template-columns: repeat(3, 1fr);
-        }
-    }
     /*태블릿모드 768*/
     @media screen and (max-width:768px) {
         section.visual { height: 300px; margin-top: 60px;} 
